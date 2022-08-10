@@ -1,8 +1,8 @@
 /*
  * @Author: wenhualong wenhualong@zuoshouyisheng.com
  * @Date: 2022-08-09 14:03:02
- * @LastEditors: wenhualong wenhualong@zuoshouyisheng.com
- * @LastEditTime: 2022-08-09 17:20:40
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-08-10 14:03:38
  * @FilePath: /test-webpack/build/webpack.config.js
  * @Description: 
  * 
@@ -22,6 +22,8 @@ module.exports = {
     },
     resolve : {
         alias : {
+            assets : genUrl('../src/assets'),
+            common : genUrl('../src/common'),
             pages : genUrl('../src/pages'),
             components : genUrl('../src/components'),
             router : genUrl('../src/router'),
@@ -32,9 +34,26 @@ module.exports = {
         rules : [
             {
                 test : /\.vue$/,
-                use : [
-                    'vue-loader'
-                ]
+                use : [ 'vue-loader' ]
+            },
+            {
+                test : /\.txt$/,
+                use : [ 'raw-loader' ]
+            },
+            {
+                test :  /\.(png|jpe?g|gif|webp)(\?.*)?$/,
+                use : [ 
+                    {
+                        loader : 'url-loader',
+                        options : {
+                            esModule : true,
+                            //fallback : 'file-loader',
+                            //name : '[name].[hash:8].[ext]',
+                            //outputPath : 'image'
+                        }
+                    }
+                ],
+            
             }
         ]
     },
@@ -58,6 +77,7 @@ module.exports = {
                 </html>
             `
         } ),
+        
     ],
     devServer:{
         port : 3000
