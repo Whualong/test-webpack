@@ -4,7 +4,7 @@
   "description": "测试loader",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "wt --config ./wt-config.js",
     "build": "webpack --config ./build/webpack.config.js",
     "serve": "webpack serve --config build/webpack.config.js --host 0.0.0.0 --hot"
   },
@@ -23,6 +23,10 @@
     "vue-router": "^4.1.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/parser": "^7.18.11",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/traverse": "^7.18.11",
     "cache-loader": "^4.1.0",
     "html-webpack-plugin": "^5.5.0",
     "raw-loader": "^4.0.2",

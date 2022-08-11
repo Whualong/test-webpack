@@ -176,7 +176,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ add)\n/* harmony export */ });\n\nfunction add(a,b){\n    __webpack_require__.e(/*! import() */ \"src_common_js_flow_js\").then(__webpack_require__.bind(__webpack_require__, /*! ./flow.js */ \"./src/common/js/flow.js\")).then((res)=>{\n        res.flow()\n    })\n   \n    return a + b\n}\n\n//# sourceURL=webpack://test-webpack/./src/common/js/add.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ add)\n/* harmony export */ });\nfunction add(a,b){\n    __webpack_require__.e(/*! import() */ \"src_common_js_flow_js\").then(__webpack_require__.bind(__webpack_require__, /*! ./flow.js */ \"./src/common/js/flow.js\")).then((res)=>{\n        res.flow()\n    })\n   \n    return a + b\n}\n\n//# sourceURL=webpack://test-webpack/./src/common/js/add.js?");
 
 /***/ }),
 
